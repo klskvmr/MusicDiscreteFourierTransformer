@@ -1,0 +1,15 @@
+{% extends "music_conversion/base.html" %}
+
+{% block content %}
+    <h2>MUSIC CONVERSION</h2>
+    <div style="padding-top: 20px">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="document">
+            <button type="submit">upload mp3</button>
+        </form>
+    </div>
+    <div style="padding-top: 20px">
+        <img src='{{ MEDIA_URL }}grafik.png' alt="">
+    </div>
+{% endblock content %}
